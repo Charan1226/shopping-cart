@@ -1,0 +1,15 @@
+<h1>Cart</h1>
+<ul>
+    <% if @cart_items.present? %>
+        <% @cart_items.each do |cart_item| %>
+        <li>
+            <%= link_to cart_item.product.name, cart_item.product %> - Quantity: <%= cart_item.quantity %>
+            <br>
+            <%= button_to "Remove from Cart", remove_from_cart_path(cart_item.product), method: :delete %>
+        </li>
+        <% end %>
+    <% else %>
+        Your Cart is empty.
+    <% end %>
+</ul>
+<p><%= link_to "Back to Products", products_path %></p>
