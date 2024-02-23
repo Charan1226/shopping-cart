@@ -9,4 +9,5 @@ $ rails db:seed
 ## Server Start:
 $ rails s
 
+
 Login with user: 'user1@example.com' or signup using a user.
