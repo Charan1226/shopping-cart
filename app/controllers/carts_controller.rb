@@ -17,7 +17,6 @@ class CartsController < ApplicationController
     else
       redirect to @product, alert: "Unable to add product to cart."
     end
-
     def remove_from_cart
       @product = Product.find(params[:id])
       @cart = current_user.cart
