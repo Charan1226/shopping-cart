@@ -1,6 +1,5 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
-
   def add_to_cart
     @product = Product.find(params[:id])
     @cart = current_user.cart
